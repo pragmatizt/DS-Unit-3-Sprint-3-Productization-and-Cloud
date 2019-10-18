@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>U3-S3 Sprint Challenge</title>
+    <h1>Header</h1>
+    <h2>subheader</h2>
+  </head>
+  <body>
+    {% for log in logs %}
+    <p>{{ log.datetime }}</p>
+    <p>{{ log.value }}</p>
+    {% endfor %}
+  </body>
+</html>

@@ -26,7 +26,7 @@ def get_data(city='Los Angeles', parameter='pm25'):
     logs = []
     status, body = api.measurements(city=city, parameter=parameter)
     observations = [(obs['date']['utc'], obs['value'])
-                      for entry in body['results']]
+                      for obs in body['results']]
     for obs in observations:
         logs.append(datetime=obs[0], value=obs[1])
     return render_template('observations.html', logs=logs)
